@@ -16,8 +16,10 @@ RaLU (not ReLU!), stands for "Rational Linear Unit", is a simple, parametric, an
 
 $`a (\in \mathbb{R})`$ is a learnable parameter.
 
-![graph](./assets/ralu.svg)
+![plot 1](./assets/ralu-1.svg)
+![plot 2](./assets/ralu-2.svg)
 
+* Gradient is $a$ at $`x=0`$.
 * It asymptotes to the identity function at $`x \to \pm \infty`$, regardless of $`a`$.
 * It is an indentity function when $`a=1`$.
 * It is a monotonic increasing function when $`0<a<9`$.
