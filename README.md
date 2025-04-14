@@ -19,9 +19,8 @@ $`a (\in \mathbb{R})`$ is a learnable parameter.
 ![graph](./assets/ralu.svg)
 
 * It asymptotes to the identity function at $`x \to \pm \infty`$, regardless of $`a`$.
-* It is a indentity function when $`a=1`$.
+* It is an indentity function when $`a=1`$.
 * It is a monotonic increasing function when $`0<a<9`$.
-    * non-decreasing function when $`0 \le a \le 9`$.
-    * loses its monotonically increasing property when $`a<0`$ or $`a>9`$.
-* Gradient is $0$ at $`x=0`$ when $`a=0`$.
-* Gradient is $0$ at $`x= \pm \sqrt{3}`$ when $`a=9`$.
+    * Gradient is $0$ at $`x=0`$ when $`a=0`$.
+    * Gradient is $0$ at $`x= \pm \sqrt{3}`$ when $`a=9`$.
+    * It loses its monotonically increasing property when $`a<0`$ or $`a>9`$.
