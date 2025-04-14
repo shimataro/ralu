@@ -26,3 +26,26 @@ $`a (\in \mathbb{R})`$ is a learnable parameter.
     * Gradient is $0$ at $`x=0`$ when $`a=0`$.
     * Gradient is $0$ at $`x= \pm \sqrt{3}`$ when $`a=9`$.
     * It loses its monotonically increasing property when $`a<0`$ or $`a>9`$.
+
+## Why for DNN?
+
+### Resistant to vanishing/exploding gradient problems
+
+It asymptotes to the identity function at $`x \to \pm \infty`$ and the gradient is $1$.
+
+In other words, it is unlikely to cause a vanishing/exploding gradient.
+
+### Beneficial for training
+
+It outputs zero mean values because it is a zero-centred odd function.
+This prevents systematic bias in the activations.
+
+### Learnable
+
+It has a parameter so that it can form the best possible shape for each unit or layer.
+
+### Fast
+
+It uses only basic arithmetic operations, no exponents or trigonometry.
+
+Therefore it is fast enough, although not as fast as ReLU.
