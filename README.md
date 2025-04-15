@@ -11,7 +11,10 @@
 ## Definition
 
 ```math
-\text{RaLU}_{a}(x) = x \frac{x^{2} + a}{x^{2} + 1}
+\begin{split}
+\text{RaLU}_{a}(x) &= x \frac{x^{2} + a}{x^{2} + 1} \\
+\frac{d}{dx}\text{RaLU}_{a}(x) &= \frac{x^{4} + (3-a)x^{2} + a}{(x^{2} + 1)^{2}}
+\end{split}
 ```
 
 $`a (\in \mathbb{R})`$ is a learnable parameter.
