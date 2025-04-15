@@ -2,12 +2,6 @@
 
 **RaLU** (not ReLU!), stands for **Rational Linear Unit**, is a simple, parametric, and gradient-stable activation function designed for Deep Neural Network.
 
-* **Gradient stability** -- Resistant to vanishing/exploding gradient problems.
-* **Learnable** -- Can form the best possible shape.
-* **Smooth** -- Infinitely differentiable at all points.
-* **Zero-centered** -- Beneficial for training.
-* **Unbouded output range** -- No "dead neuron".
-
 ## Definition
 
 ```math
