@@ -2,8 +2,8 @@
 
 **RaLU** (not ReLU!), stands for **Rational Linear Unit**, is a simple, parametric, and gradient-stable activation function designed for Deep Neural Network.
 
-* **Gradient stability** -- Resistant to loss-of-gradient problems, and not prone to deterioration even when layered.
-* **Learnable** -- Can form the best shape for each unit.
+* **Gradient stability** -- Resistant to vanishing/exploding gradient problems.
+* **Learnable** -- Can form the best possible shape.
 * **Smooth** -- Infinitely differentiable at all points.
 * **Zero-centered** -- Beneficial for training.
 * **Unbouded output range** -- No "dead neuron".
@@ -24,8 +24,8 @@ $`a (\in \mathbb{R})`$ is a learnable parameter.
 
 * Gradient is $a$ at $`x=0`$.
 * It asymptotes to the identity function at $`x \to \pm \infty`$, regardless of $`a`$.
-* It is an indentity function when $`a=1`$.
-* It is a monotonic increasing function when $`0 \le a \le 9`$.
+* $`a=1`$ gives an indentity function.
+* $`0 \le a \le 9`$ gives a monotonic increasing function.
     * Gradient is $0$ at $`x=0`$ when $`a=0`$.
     * Gradient is $0$ at $`x= \pm \sqrt{3}`$ when $`a=9`$.
     * It loses its monotonically increasing property when $`a<0`$ or $`a>9`$.
@@ -36,11 +36,14 @@ $`a (\in \mathbb{R})`$ is a learnable parameter.
 
 It asymptotes to the identity function at $`x \to \pm \infty`$ and the gradient is $1$.
 
-In other words, it is unlikely to cause a vanishing/exploding gradient and is well suited for regression problems, CV (CNN), NLP (RNN, Transformer), etc.
+In other words, it is unlikely to cause a vanishing/exploding gradient even when layered and is well suited for regression problems, CV (CNN), NLP (RNN, Transformer), etc.
 
 ### Beneficial for training
 
-It outputs zero mean values because it is a zero-centred odd function.
+It is infinitely differentiable (smooth) for all "x", for any parameter "a".
+This property means that it can avoid gradient discontinuities and can lead to more stable training in gradient descent.
+
+Also, it outputs zero mean values because it is a zero-centred odd function.
 This prevents systematic bias in the activations.
 
 ### No "dead neuron problems"
