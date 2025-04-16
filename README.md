@@ -6,23 +6,23 @@
 
 ```math
 \begin{split}
-\text{RaLU}_{a}(x) &= x \frac{x^{2} + a}{x^{2} + 1} \\
-\frac{d}{dx}\text{RaLU}_{a}(x) &= \frac{x^{4} + (3-a)x^{2} + a}{(x^{2} + 1)^{2}}
+\text{RaLU}_{\alpha}(x) &= x \frac{x^{2} + \alpha}{x^{2} + 1} \\
+\frac{d}{dx}\text{RaLU}_{\alpha}(x) &= \frac{x^{4} + (3-\alpha)x^{2} + \alpha}{(x^{2} + 1)^{2}}
 \end{split}
 ```
 
-$`a (\in \mathbb{R})`$ is a learnable parameter.
+$`\alpha (\in \mathbb{R})`$ is a learnable parameter.
 
 ![plot 1](./assets/ralu-1.svg)
 ![plot 2](./assets/ralu-2.svg)
 
-* Gradient is $a$ at $`x=0`$.
-* It asymptotes to the identity function at $`x \to \pm \infty`$, regardless of $`a`$.
-* $`a=1`$ gives an indentity function.
-* $`0 \le a \le 9`$ gives a monotonic increasing function.
-    * Gradient is $0$ at $`x=0`$ when $`a=0`$.
-    * Gradient is $0$ at $`x= \pm \sqrt{3}`$ when $`a=9`$.
-    * It loses its monotonically increasing property when $`a<0`$ or $`a>9`$.
+* Gradient is $\alpha$ at $`x=0`$.
+* It asymptotes to the identity function at $`x \to \pm \infty`$, regardless of $`\alpha`$.
+* $`\alpha=1`$ gives an indentity function.
+* $`0 \le \alpha \le 9`$ gives a monotonic increasing function.
+    * Gradient is $0$ at $`x=0`$ when $`\alpha=0`$.
+    * Gradient is $0$ at $`x= \pm \sqrt{3}`$ when $`\alpha=9`$.
+    * It loses its monotonically increasing property when $`\alpha<0`$ or $`\alpha>9`$.
 
 ## Why for DNN?
 
@@ -34,7 +34,7 @@ In other words, it is unlikely to cause a vanishing/exploding gradient even when
 
 ### Beneficial for training
 
-It is infinitely differentiable (smooth) for all "x", for any parameter "a".
+It is infinitely differentiable (smooth) for all $x$, for any parameter $\alpha$.
 This property means that it can avoid gradient discontinuities and can lead to more stable training in gradient descent.
 
 Also, it outputs zero mean values because it is a zero-centred odd function.
