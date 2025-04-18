@@ -1,6 +1,6 @@
 # RaLU - A New Activation Function for Deep Neural Network
 
-**RaLU** (not ReLU!), stands for **Rational Linear Unit**, is a simple, parametric, and gradient-stable activation function designed for Deep Neural Network.
+**RaLU** (not ReLU!), stands for **Rational Linear Unit**, is a parametric, lightweight, and gradient-stable activation function designed for Deep Neural Network.
 
 ## Definition
 
